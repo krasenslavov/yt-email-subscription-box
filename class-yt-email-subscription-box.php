@@ -3,7 +3,7 @@
  * Plugin Name: YT Email Subscription Box
  * Plugin URI: https://github.com/krasenslavov/yt-email-subscription-box
  * Description: Simple opt-in subscription form that stores emails locally with CSV export functionality.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Krasen Slavov
@@ -127,8 +127,8 @@ class YT_Email_Subscription_Box {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'yt-esb-style', YT_ESB_URL . 'assets/css/style.css', array(), YT_ESB_VERSION );
-		wp_enqueue_script( 'yt-esb-script', YT_ESB_URL . 'assets/js/script.js', array( 'jquery' ), YT_ESB_VERSION, true );
+		wp_enqueue_style( 'yt-esb-style', YT_ESB_URL . 'assets/css/yt-email-subscription-box.css', array(), YT_ESB_VERSION );
+		wp_enqueue_script( 'yt-esb-script', YT_ESB_URL . 'assets/js/yt-email-subscription-box.js', array( 'jquery' ), YT_ESB_VERSION, true );
 		wp_localize_script(
 			'yt-esb-script',
 			'ytEsbAjax',
